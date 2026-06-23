@@ -1,0 +1,157 @@
+{
+  "project": "Madonna Catholic College Web Portal",
+  "theme": {
+    "primaryColor": "#6B4B9A",
+    "secondaryColor": "#F5C6D6",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#333333",
+    "cardShadow": "0 2px 8px rgba(0,0,0,0.1)",
+    "borderRadius": "12px",
+    "fontFamily": "Inter, sans-serif"
+  },
+  "pages": [
+    {
+      "name": "Dashboard",
+      "path": "/dashboard",
+      "components": [
+        {
+          "type": "Sidebar",
+          "active": "Dashboard",
+          "menuItems": [
+            "Dashboard","Academics","My Grades","Assignments","Attendance",
+            "Calendar","Announcements","Messages","Resources",
+            "Clubs & Activities","Profile","Settings","Help & Support"
+          ]
+        },
+        {
+          "type": "TopHeader",
+          "profileAvatar": "user-avatar.png",
+          "notifications": 2,
+          "messages": 3
+        },
+        {
+          "type": "CardsSection",
+          "cards": [
+            {"title":"My Profile","contentFields":[{"label":"Name","value":"Alex Turner"},{"label":"Year","value":"11"},{"label":"Email","value":"alex.turner@mcc.edu.ng"}]},
+            {"title":"Recent Grades","tableColumns":["Subject","Grade"],"tableData":[{"Subject":"Mathematics","Grade":"A-"},{"Subject":"Physics","Grade":"A"}]},
+            {"title":"Announcements","items":[{"title":"PTA Meeting","date":"2024-05-18"},{"title":"Sports Day","date":"2024-05-17"}]},
+            {"title":"Upcoming Events","calendar":true,"events":[{"title":"Inter-House Sports","date":"2024-05-17"},{"title":"Mass","date":"2024-05-19"}]},
+            {"title":"Quick Links","links":["Homework","Timetable","Attendance","Exams","Library","Fee Payment"]}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Academics",
+      "path": "/academics",
+      "components": [
+        {"type":"Sidebar","active":"Academics"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"SubjectCards","subjects":[{"name":"Mathematics","teacher":"Mr. John Okafor","room":"106"},{"name":"Physics","teacher":"Mrs. Grace Eze","room":"104"}]},
+        {"type":"Resources","items":["Study Guides","Past Questions","Recommended Reads","Videos","Notes"]}
+      ]
+    },
+    {
+      "name": "My Grades",
+      "path": "/my-grades",
+      "components": [
+        {"type":"Sidebar","active":"My Grades"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"GradesTable","columns":["Subject","Term Grade","Class Average","Rank","Remark"],"data":[{"Subject":"Mathematics","Term Grade":"A-","Class Average":"86%","Rank":"2/30","Remark":"Excellent"}]},
+        {"type":"Actions","buttons":["Download Report Card"]}
+      ]
+    },
+    {
+      "name": "Assignments",
+      "path": "/assignments",
+      "components": [
+        {"type":"Sidebar","active":"Assignments"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"AssignmentTabs","tabs":["Upcoming","Submitted","Completed"],"tableColumns":["Assignment","Subject","Due Date","Status","Actions"],"tableData":[{"Assignment":"Algebra Problem Set","Subject":"Mathematics","Due Date":"2024-05-20","Status":"Due in 2 days","Actions":"View"}]}
+      ]
+    },
+    {
+      "name": "Attendance",
+      "path": "/attendance",
+      "components": [
+        {"type":"Sidebar","active":"Attendance"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"AttendanceSummary","overall":"95%","Present":57,"Absent":3,"Late":2},
+        {"type":"AttendanceTable","columns":["Date","Day","Status","Remarks"],"data":[{"Date":"2024-05-15","Day":"Wednesday","Status":"Present","Remarks":""}]}
+      ]
+    },
+    {
+      "name": "Calendar",
+      "path": "/calendar",
+      "components": [
+        {"type":"Sidebar","active":"Calendar"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"MonthlyCalendar","events":[{"title":"Inter-House Sports","date":"2024-05-17"},{"title":"PTA Meeting","date":"2024-05-18"}]}
+      ]
+    },
+    {
+      "name": "Announcements",
+      "path": "/announcements",
+      "components": [
+        {"type":"Sidebar","active":"Announcements"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"AnnouncementsList","items":[{"title":"PTA Meeting","date":"2024-05-18"},{"title":"School Newsletter","date":"2024-05-16"}]}
+      ]
+    },
+    {
+      "name": "Messages",
+      "path": "/messages",
+      "components": [
+        {"type":"Sidebar","active":"Messages"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"MessagesInbox","columns":["Sender","Subject","Date","Status"],"data":[{"Sender":"Mrs. Grace Eze","Subject":"Physics Homework","Date":"2024-05-15","Status":"Unread"}]}
+      ]
+    },
+    {
+      "name": "Resources",
+      "path": "/resources",
+      "components": [
+        {"type":"Sidebar","active":"Resources"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"ResourcesGrid","items":["Study Guides","Videos","Past Questions","Lecture Notes"]}
+      ]
+    },
+    {
+      "name": "Clubs & Activities",
+      "path": "/clubs",
+      "components": [
+        {"type":"Sidebar","active":"Clubs & Activities"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"ClubsGrid","items":[{"name":"Debate Club","description":"Enhance public speaking"},{"name":"Science Club","description":"Practical experiments"}]}
+      ]
+    },
+    {
+      "name": "Profile",
+      "path": "/profile",
+      "components": [
+        {"type":"Sidebar","active":"Profile"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"ProfileForm","fields":[{"label":"First Name"},{"label":"Last Name"},{"label":"Email"},{"label":"Phone"}],"actions":["Save Changes"]}
+      ]
+    },
+    {
+      "name": "Settings",
+      "path": "/settings",
+      "components": [
+        {"type":"Sidebar","active":"Settings"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"SettingsForm","fields":["Change Password","Notification Preferences","Privacy Settings"],"actions":["Save Changes"]}
+      ]
+    },
+    {
+      "name": "Help & Support",
+      "path": "/help",
+      "components": [
+        {"type":"Sidebar","active":"Help & Support"},
+        {"type":"TopHeader","profileAvatar":"user-avatar.png"},
+        {"type":"FAQs","items":[{"question":"How to reset password?","answer":"Click forgot password on login."},{"question":"How to submit homework?","answer":"Use the Assignments tab."}]},
+        {"type":"ContactSupport","methods":["Email","Chat","Phone"]}
+      ]
+    }
+  ]
+}
